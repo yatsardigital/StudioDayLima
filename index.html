@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="pt-BR">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+    <script>
+      document.documentElement.classList.add("js")
+    </script>
+    <title>
+      Studio Day Lima – Esmalteria em Suzano
+    </title>
+    <link href="style.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <a class="logo" href="#inicio">
+          Studio Day Lima
+        </a>
+        <nav>
+          <a href="#sobre">
+            Quem somos
+          </a>
+          <a href="#servicos">
+            Procedimentos
+          </a>
+          <a href="#depoimentos">
+            Depoimentos
+          </a>
+          <a href="#localizacao">
+            Localização
+          </a>
+          <a href="#trabalhe">
+            Trabalhe conosco
+          </a>
+        </nav>
+        <button aria-haspopup="dialog" aria-label="Buscar no site" class="sbtn" data-search type="button">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+        <a class="btn" href="https://wa.me/5511976652392?text=Ol%C3%A1%21+Vim+do+site+e+quero+agendar+um+hor%C3%A1rio" rel="noopener" target="_blank">
+          Agendar
+        </a>
+        <button aria-label="Alternar tema claro e escuro" class="tg" id="tg">
+          🌙
+        </button>
+        <button aria-expanded="false" aria-label="Abrir menu" class="hb" id="hb">
+          <span>
+          </span>
+          <span>
+          </span>
+          <span>
+          </span>
+        </button>
+      </div>
+    </header>
+    <section class="hero" id="inicio">
+      <div aria-hidden="true" class="hero-bg">
+        <img alt="" decoding="async" fetchpriority="high" src="img/hero-fachada.webp"/>
+      </div>
+      <div class="wrap hero-in">
+        <div class="hero-copy">
+          <p class="hero-kicker">
+            Studio Day Lima, em Suzano
+          </p>
+          <h1>
+            Beleza em cada detalhe, carinho em cada experiência.
+          </h1>
+          <p class="hero-sub">
+            Mais do que um momento de beleza, o Studio Day Lima oferece uma experiência de cuidado, conforto e acolhimento. Cada detalhe é pensado com carinho para que você se sinta especial em cada visita.
+          </p>
+          <div class="hero-cta">
+            <a class="btn" href="#servicos">
+              Ver serviços
+            </a>
+            <a class="hero-link" href="https://wa.me/5511976652392?text=Ol%C3%A1%21+Vim+do+site+e+quero+agendar+um+hor%C3%A1rio" rel="noopener" target="_blank">
+              Agendar pelo WhatsApp <span aria-hidden="true">›</span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-dock">
+          <button aria-haspopup="dialog" class="hero-search" data-search type="button">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <span class="hs-t">Buscar procedimentos e horários</span>
+            <kbd aria-hidden="true" class="kbd-hint">Ctrl K</kbd>
+          </button>
+          <div class="chips">
+            <span class="chip" id="openNow">
+              <i aria-hidden="true" class="dot"></i>
+              <span>Seg a sex, 9h às 19h</span>
+            </span>
+            <a class="chip" href="#localizacao">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              Suzano, SP
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="wrap">
+        <div class="grid">
+          <div class="card">
+            <h3>
+              Qualidade
+            </h3>
+            <p>
+              Selecionamos cuidadosamente nossos produtos, priorizando a qualidade e o cuidado que sua beleza merece.
+            </p>
+          </div>
+          <div class="card">
+            <h3>
+              Atenção
+            </h3>
+            <p>
+              Cada cliente é única. Por isso, dedicamos atenção a cada detalhe para oferecer um atendimento personalizado e acolhedor.
+            </p>
+          </div>
+          <div class="card">
+            <h3>
+              Conforto
+            </h3>
+            <p>
+              Preparamos cada espaço para que você desfrute de momentos de tranquilidade, conforto e bem-estar durante sua experiência conosco.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about" id="sobre">
+      <div class="wrap">
+        <div class="car">
+          <div class="trk" id="trk">
+            <div>
+              <img alt="Café do Studio Day Lima" loading="lazy" src="img/sobre-01.webp"/>
+            </div>
+            <div>
+              <img alt="Fachada do Studio Day Lima" loading="lazy" src="img/sobre-02.webp"/>
+            </div>
+          </div>
+          <button aria-label="Foto anterior" class="ar l" id="pv">
+            ‹
+          </button>
+          <button aria-label="Próxima foto" class="ar r" id="nx">
+            ›
+          </button>
+          <div class="dots" id="dots">
+          </div>
+        </div>
+        <div>
+          <div class="eyebrow">
+            Sobre nós
+          </div>
+          <h2>
+            Mais que beleza, um momento para você.
+          </h2>
+          <p>
+            O Studio Day Lima nasceu com o propósito de oferecer em Suzano uma experiência de beleza que vai além da estética: um momento de cuidado, conforto e bem-estar.
+          </p>
+          <p>
+            Nossa equipe é formada por profissionais dedicadas, que valorizam cada detalhe, desde a higiene e a qualidade dos serviços até o atendimento personalizado. Queremos que cada cliente se sinta acolhida, confiante e especial.
+          </p>
+          <p>
+            Aqui, sua beleza é valorizada com carinho, dedicação e excelência. Mais do que cuidar de você por fora, queremos proporcionar uma experiência que faça você se sentir bem por inteiro.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="servicos">
+      <div class="wrap">
+        <div class="sec-h">
+          <div class="eyebrow">
+            Serviços
+          </div>
+          <h2>
+            Conheça nossos procedimentos
+          </h2>
+          <p>
+            Escolha o seu e agende direto pelo WhatsApp.
+          </p>
+        </div>
+        <div class="svs">
+          <article class="sv">
+            <div aria-label="Fotos de Unhas de gel" class="sv-ph">
+              <div class="sv-s on">
+                <img alt="Unhas de gel 1" loading="lazy" src="img/unhas-gel-01.webp"/>
+              </div>
+              <div class="sv-s">
+                <img alt="Unhas de gel 2" loading="lazy" src="img/unhas-gel-02.webp"/>
+              </div>
+              <div class="sv-s">
+                <img alt="Unhas de gel 3" loading="lazy" src="img/unhas-gel-03.webp"/>
+              </div>
+              <div class="sv-s">
+                <img alt="Unhas de gel 4" loading="lazy" src="img/unhas-gel-04.webp"/>
+              </div>
+              <button aria-label="Foto anterior" class="ar l" type="button">‹</button><button aria-label="Próxima foto" class="ar r" type="button">›</button><div class="sv-dots">
+              </div>
+            </div>
+            <div class="sv-d">
+              <h3>
+                Unhas de gel
+              </h3>
+              <p>
+                Alongamento que une beleza, resistência e naturalidade, com o formato e acabamento que combinam com você.
+              </p>
+            </div>
+            <a class="sv-b" href="https://wa.me/5511976652392?text=Ol%C3%A1%2C+tudo+bem%3F+Vim+do+site%2C+gostaria+de+agendar+um+hor%C3%A1rio+para+Unhas+de+Gel." rel="noopener" target="_blank">
+              Agendar horário →
+            </a>
+          </article>
+          <article class="sv rev">
+            <div aria-label="Fotos de Esmaltação em gel" class="sv-ph">
+              <div class="sv-s on">
+                <img alt="Esmaltação em gel 1" loading="lazy" src="img/esmaltacao-01.webp"/>
+              </div>
+              <div class="sv-s">
+                <img alt="Esmaltação em gel 2" loading="lazy" src="img/esmaltacao-02.webp"/>
+              </div>
+              <button aria-label="Foto anterior" class="ar l" type="button">‹</button><button aria-label="Próxima foto" class="ar r" type="button">›</button><div class="sv-dots">
+              </div>
+            </div>
+            <div class="sv-d">
+              <h3>
+                Esmaltação em gel
+              </h3>
+              <p>
+                A esmaltação em gel valoriza suas unhas naturais com brilho intenso e acabamento impecável. Com a preparação adequada e atenção à saúde das unhas, você conquista mãos elegantes, bem cuidadas e lindas por muito mais tempo.
+              </p>
+            </div>
+            <a class="sv-b" href="https://wa.me/5511976652392?text=Ol%C3%A1%2C+tudo+bem%3F+Vim+do+site%2C+gostaria+de+agendar+um+hor%C3%A1rio+para+Esmalta%C3%A7%C3%A3o+em+Gel." rel="noopener" target="_blank">
+              Agendar horário →
+            </a>
+          </article>
+          <article class="sv">
+            <div aria-label="Fotos de Spa dos pés" class="sv-ph">
+<div class="sv-s on">
+<img alt="Spa dos pés 1" loading="lazy" src="img/spa-01.webp"/>
+</div>
+<div class="sv-s">
+<img alt="Spa dos pés 2" loading="lazy" src="img/spa-02.webp"/>
+</div>
+<div class="sv-s">
+<img alt="Spa dos pés 3" loading="lazy" src="img/spa-03.webp"/>
+</div>
+<div class="sv-s">
+<img alt="Spa dos pés 4" loading="lazy" src="img/spa-04.webp"/>
+</div>
+<button aria-label="Foto anterior" class="ar l" type="button">‹</button><button aria-label="Próxima foto" class="ar r" type="button">›</button>
+<div class="sv-dots">
+</div>
+</div>
+<div class="sv-d">
+              <h3>
+                Spa dos pés
+              </h3>
+              <p>
+                O Spa dos Pés combina hidratação, esfoliação e cuidados especiais para deixar a pele mais macia, suave e renovada, proporcionando uma deliciosa sensação de leveza e bem-estar. Um carinho que seus pés merecem!
+              </p>
+            </div>
+            <a class="sv-b" href="https://wa.me/5511976652392?text=Ol%C3%A1%2C+tudo+bem%3F+Vim+do+site%2C+gostaria+de+agendar+um+hor%C3%A1rio+para+Spa+dos+P%C3%A9s." rel="noopener" target="_blank">
+              Agendar horário →
+            </a>
+          </article>
+          <article class="sv rev">
+            <div aria-label="Fotos de Banho de gel" class="sv-ph">
+              <div class="sv-s on">
+                <img alt="Banho de gel 1" loading="lazy" src="img/banho-01.webp"/>
+              </div>
+              <div class="sv-s">
+                <img alt="Banho de gel 2" loading="lazy" src="img/banho-02.webp"/>
+              </div>
+              <button aria-label="Foto anterior" class="ar l" type="button">‹</button><button aria-label="Próxima foto" class="ar r" type="button">›</button><div class="sv-dots">
+              </div>
+            </div>
+            <div class="sv-d">
+              <h3>
+                Banho de gel
+              </h3>
+              <p>
+                Um cuidado especial para fortalecer, proteger e valorizar suas unhas naturais. Mais resistência, brilho e beleza, sem abrir mão da higiene e do cuidado com suas unhas.
+              </p>
+            </div>
+            <a class="sv-b" href="https://wa.me/5511976652392?text=Ol%C3%A1%2C+tudo+bem%3F+Vim+do+site%2C+gostaria+de+agendar+um+hor%C3%A1rio+para+Banho+de+Gel." rel="noopener" target="_blank">
+              Agendar horário →
+            </a>
+          </article>
+          <article class="sv">
+            <div aria-label="Fotos de Manicure e pedicure" class="sv-ph">
+              <div class="sv-s on">
+                <img alt="Manicure e pedicure 1" loading="lazy" src="img/manicure-01.webp"/>
+              </div>
+              <div class="sv-s">
+                <img alt="Manicure e pedicure 2" loading="lazy" src="img/manicure-02.webp"/>
+              </div>
+              <button aria-label="Foto anterior" class="ar l" type="button">‹</button><button aria-label="Próxima foto" class="ar r" type="button">›</button><div class="sv-dots">
+              </div>
+            </div>
+            <div class="sv-d">
+              <h3>
+                Manicure e pedicure
+              </h3>
+              <p>
+                Cuidado com as unhas, cutículas bem cuidadas e acabamento impecável. Mais saúde, beleza e delicadeza para suas mãos e pés.
+              </p>
+            </div>
+            <a class="sv-b" href="https://wa.me/5511976652392?text=Ol%C3%A1%2C+tudo+bem%3F+Vim+do+site%2C+gostaria+de+agendar+um+hor%C3%A1rio+para+Manicure+e+Pedicure." rel="noopener" target="_blank">
+              Agendar horário →
+            </a>
+          </article>
+          <article class="sv rev">
+            <div aria-label="Fotos de Extensão de cílios" class="sv-ph">
+              <div class="sv-s on">
+                <img alt="Extensão de cílios 1" loading="lazy" src="img/cilios-01.webp"/>
+              </div>
+              <div class="sv-s">
+                <img alt="Extensão de cílios 2" loading="lazy" src="img/cilios-02.webp"/>
+              </div>
+              <div class="sv-s">
+                <img alt="Extensão de cílios 3" loading="lazy" src="img/cilios-03.webp"/>
+              </div>
+              <div class="sv-s">
+                <img alt="Extensão de cílios 4" loading="lazy" src="img/cilios-04.webp"/>
+              </div>
+              <button aria-label="Foto anterior" class="ar l" type="button">‹</button><button aria-label="Próxima foto" class="ar r" type="button">›</button><div class="sv-dots">
+              </div>
+            </div>
+            <div class="sv-d">
+              <h3>
+                Extensão de cílios
+              </h3>
+              <p>
+                A extensão de cílios traz mais definição e delicadeza, com técnicas que respeitam a harmonia do seu olhar e valorizam sua beleza natural.
+              </p>
+            </div>
+            <a class="sv-b" href="https://wa.me/5511976652392?text=Ol%C3%A1%2C+tudo+bem%3F+Vim+do+site%2C+gostaria+de+agendar+um+hor%C3%A1rio+para+Extens%C3%A3o+de+C%C3%ADlios." rel="noopener" target="_blank">
+              Agendar horário →
+            </a>
+          </article>
+          <article class="sv">
+            <div aria-label="Fotos de Designer de sobrancelha" class="sv-ph">
+              <div class="sv-s on">
+                <img alt="Designer de sobrancelha 1" loading="lazy" src="img/sobrancelha-01.webp"/>
+              </div>
+              <div class="sv-s">
+                <img alt="Designer de sobrancelha 2" loading="lazy" src="img/sobrancelha-02.webp"/>
+              </div>
+              <div class="sv-s">
+                <img alt="Designer de sobrancelha 3" loading="lazy" src="img/sobrancelha-03.webp"/>
+              </div>
+              <div class="sv-s">
+                <img alt="Designer de sobrancelha 4" loading="lazy" src="img/sobrancelha-04.webp"/>
+              </div>
+              <button aria-label="Foto anterior" class="ar l" type="button">‹</button><button aria-label="Próxima foto" class="ar r" type="button">›</button><div class="sv-dots">
+              </div>
+            </div>
+            <div class="sv-d">
+              <h3>
+                Designer de sobrancelha
+              </h3>
+              <p>
+                Um design personalizado que respeita o formato do seu rosto e valoriza a expressão do seu olhar.
+              </p>
+            </div>
+            <a class="sv-b" href="https://wa.me/5511976652392?text=Ol%C3%A1%2C+tudo+bem%3F+Vim+do+site%2C+gostaria+de+agendar+um+hor%C3%A1rio+para+Designer+de+Sobrancelha." rel="noopener" target="_blank">
+              Agendar horário →
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="about">
+      <div class="wrap" style="display:block;text-align:center">
+        <div class="eyebrow">
+          Como funciona
+        </div>
+        <h2 style="margin-bottom:32px">
+          Seu atendimento em 3 passos
+        </h2>
+        <div class="grid steps" style="text-align:left">
+          <div class="card">
+            <div class="n">
+              01
+            </div>
+            <h3>
+              Escolha
+            </h3>
+            <p>
+              Defina o procedimento que mais combina com você e chame no WhatsApp.
+            </p>
+          </div>
+          <div class="card">
+            <div class="n">
+              02
+            </div>
+            <h3>
+              Agende
+            </h3>
+            <p>
+              Combinamos o melhor dia e horário e confirmamos tudo com você.
+            </p>
+          </div>
+          <div class="card">
+            <div class="n">
+              03
+            </div>
+            <h3>
+              Relaxe
+            </h3>
+            <p>
+              Chegue, acomode-se e aproveite um atendimento feito com calma e capricho.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="galeria">
+      <div class="wrap">
+        <div class="sec-h">
+          <div class="eyebrow">
+            Galeria
+          </div>
+          <h2>
+            Nossos trabalhos
+          </h2>
+          <p>
+            Coloque aqui as fotos das suas unhas.
+          </p>
+        </div>
+        <div class="gal">
+          <div>
+            <img alt="Trabalho do salão 1" loading="lazy" src="img/galeria-01.webp"/>
+          </div>
+          <div>
+            <img alt="Trabalho do salão 2" loading="lazy" src="img/galeria-02.webp"/>
+          </div>
+          <div>
+            <img alt="Trabalho do salão 3" loading="lazy" src="img/galeria-03.webp"/>
+          </div>
+          <div>
+            <img alt="Trabalho do salão 4" loading="lazy" src="img/galeria-04.webp"/>
+          </div>
+          <div>
+            <img alt="Trabalho do salão 5" loading="lazy" src="img/galeria-05.webp"/>
+          </div>
+          <div>
+            <img alt="Trabalho do salão 6" loading="lazy" src="img/galeria-06.webp"/>
+          </div>
+          <div>
+            <img alt="Trabalho do salão 7" loading="lazy" src="img/galeria-07.webp"/>
+          </div>
+          <div>
+            <img alt="Trabalho do salão 8" loading="lazy" src="img/galeria-08.webp"/>
+          </div>
+        </div>
+        <p style="text-align:center;margin-top:24px">
+          <a class="btn o" href="https://instagram.com/" rel="noopener" target="_blank">
+            Ver mais no Instagram
+          </a>
+        </p>
+      </div>
+    </section>
+    <section class="rv" id="depoimentos">
+      <div class="wrap">
+        <div class="sec-h">
+          <div class="eyebrow">
+            Depoimentos
+          </div>
+          <h2>
+            O que dizem nossas clientes
+          </h2>
+          <p>
+            Avaliações de quem já viveu a experiência Studio Day Lima.
+          </p>
+          <div class="rv-sum">
+            <span aria-hidden="true" class="st">
+              ★★★★★
+            </span>
+            <span>
+              Avaliações das clientes
+            </span>
+          </div>
+        </div>
+        <div class="rv-wrap">
+          <div aria-label="Carrossel de depoimentos" class="rv-trk" id="rvTrk" tabindex="0">
+          </div>
+          <div class="rv-nav">
+            <button aria-label="Depoimento anterior" class="rv-b" id="rvPv">
+              ‹
+            </button>
+            <div class="rv-dots" id="rvDots">
+            </div>
+            <button aria-label="Próximo depoimento" class="rv-b" id="rvNx">
+              ›
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="trabalhe">
+      <div class="wrap job">
+        <div class="eyebrow">
+          Trabalhe conosco
+        </div>
+        <h2>
+          Faça parte da nossa equipe
+        </h2>
+        <select id="area">
+          <option>
+            Recepção
+          </option>
+          <option>
+            Técnica
+          </option>
+          <option>
+            Comercial
+          </option>
+        </select>
+        <a class="btn" href="#" onclick="this.href='https://wa.me/5511976652392?text='+encodeURIComponent('Olá! Tenho interesse em trabalhar na área: '+document.getElementById('area').value);" rel="noopener" target="_blank">
+          Enviar interesse
+        </a>
+      </div>
+    </section>
+    <section class="loc" id="localizacao">
+      <div class="wrap">
+        <div class="sec-h">
+          <div class="eyebrow">
+            Localização
+          </div>
+          <h2>
+            Venha nos visitar
+          </h2>
+        </div>
+        <div class="grid">
+          <dl>
+            <dt>
+              Endereço
+            </dt>
+            <dd>
+              Rua Exemplo, 000 – Centro
+              <br/>
+              Suzano – SP
+            </dd>
+            <dt>
+              Atendimento
+            </dt>
+            <dd>
+              Segunda a sexta, 9h às 19h
+              <br/>
+              Sábado, 9h às 16h
+            </dd>
+            <dt>
+              WhatsApp
+            </dt>
+            <dd>
+              (11) 97665-2392
+            </dd>
+            <p style="margin-top:20px">
+              <a class="btn o" href="https://wa.me/5511976652392" rel="noopener" target="_blank">
+                Chamar no WhatsApp
+              </a>
+            </p>
+          </dl>
+          <div class="map">
+            <iframe loading="lazy" src="https://maps.google.com/maps?q=Suzano%20SP&z=13&output=embed" title="Mapa">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="faq">
+      <div class="wrap">
+        <div class="sec-h">
+          <div class="eyebrow">
+            Dúvidas
+          </div>
+          <h2>
+            Perguntas frequentes
+          </h2>
+        </div>
+        <details>
+          <summary>
+            Preciso agendar com antecedência?
+          </summary>
+          <p>
+            Recomendamos agendar pelo WhatsApp para garantir o seu horário.
+          </p>
+        </details>
+        <details>
+          <summary>
+            Quanto tempo dura a esmaltação em gel?
+          </summary>
+          <p>
+            Em média de duas a três semanas, dependendo dos cuidados e da rotina de cada cliente.
+          </p>
+        </details>
+        <details>
+          <summary>
+            Como funciona a higienização?
+          </summary>
+          <p>
+            Os materiais são higienizados e esterilizados a cada atendimento.
+          </p>
+        </details>
+        <details>
+          <summary>
+            Quais formas de pagamento?
+          </summary>
+          <p>
+            Pix, cartões de débito e crédito e dinheiro.
+          </p>
+        </details>
+      </div>
+    </section>
+    <section class="cta">
+      <div class="wrap">
+        <h2>
+          Pronta para se cuidar?
+        </h2>
+        <p>
+          Reserve seu horário e viva uma experiência de beleza e relaxamento.
+        </p>
+        <a class="btn" href="https://wa.me/5511976652392?text=Ol%C3%A1%21+Quero+agendar+meu+hor%C3%A1rio" rel="noopener" target="_blank">
+          Agendar pelo WhatsApp
+        </a>
+      </div>
+    </section>
+    <footer>
+      <div class="wrap">
+        <div class="foot">
+          <div>
+            <h4>
+              Studio Day Lima
+            </h4>
+            Cuidado e beleza para mãos e pés em Suzano – SP.
+          </div>
+          <div>
+            <h4>
+              Navegação
+            </h4>
+            <a href="#inicio">
+              Início
+            </a>
+            <a href="#sobre">
+              Quem somos
+            </a>
+            <a href="#servicos">
+              Procedimentos
+            </a>
+            <a href="#depoimentos">
+              Depoimentos
+            </a>
+            <a href="#localizacao">
+              Localização
+            </a>
+          </div>
+          <div>
+            <h4>
+              Atendimento
+            </h4>
+            Rua Exemplo, 000 – Suzano – SP
+            <br/>
+            Seg a sex, 9h às 19h · Sáb, 9h às 16h
+          </div>
+        </div>
+        © 2026 Studio Day Lima. Todos os direitos reservados.
+      </div>
+    </footer>
+    <div class="bub">
+      Olá 👋 Como podemos te ajudar?
+    </div>
+    <a class="wa" href="https://wa.me/5511976652392" rel="noopener" target="_blank">
+      Dúvidas no WhatsApp
+    </a>
+    <div class="sp" hidden id="sp">
+      <div class="sp-scrim" data-close></div>
+      <div aria-label="Buscar no site" aria-modal="true" class="sp-panel" role="dialog">
+        <div class="sp-field">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input aria-autocomplete="list" aria-controls="spl" aria-expanded="true" aria-label="Buscar no site" autocapitalize="off" autocomplete="off" enterkeyhint="go" id="spq" placeholder="Buscar procedimentos e horários" role="combobox" spellcheck="false" type="search"/>
+          <button class="sp-x" data-close type="button">Cancelar</button>
+        </div>
+        <div aria-label="Resultados da busca" class="sp-list" id="spl" role="listbox"></div>
+        <div aria-hidden="true" class="sp-foot">
+          <span><kbd>↑</kbd> <kbd>↓</kbd> navegar</span>
+          <span><kbd>↵</kbd> abrir</span>
+          <span><kbd>esc</kbd> fechar</span>
+        </div>
+        <div aria-live="polite" class="sr" id="spst"></div>
+      </div>
+    </div>
+    <script src="script.js">
+    </script>
+  </body>
+</html>
