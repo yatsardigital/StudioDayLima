@@ -2471,3 +2471,38 @@ header.is-compact .hdr-cta {
   height: 40px;
   padding: 0;
 }
+
+/* Agendar: estado normal (topo da página) sempre com o texto inteiro */
+header .hdr-cta {
+  width: auto;
+  min-width: 0;
+  max-width: none;
+  overflow: visible;
+  flex: none;
+  white-space: nowrap;
+}
+header .hdr-cta .lbl {
+  max-width: none;
+  overflow: visible;
+  opacity: 1;
+  white-space: nowrap;
+}
+header .hdr-cta .ico {
+  width: 18px;
+  opacity: 1;
+}
+
+/* Agendar: estado compacto (ao rolar) como círculo com ícone */
+header.is-compact .hdr-cta {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  padding: 0;
+  overflow: hidden;
+  justify-content: center;
+}
+header.is-compact .hdr-cta .lbl {
+  max-width: 0;
+  overflow: hidden;
+  opacity: 0;
+}
