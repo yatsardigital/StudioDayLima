@@ -1721,3 +1721,724 @@ a.chip:hover {
 .sv-ph .ar.r {
   right:12px;
 }
+
+/* =========================================================
+   Botões em vidro líquido (estilo iOS atual)
+   Quase transparente, com blur forte, borda clara e brilho
+   no topo. Claro nas seções de fundo claro, branco sobre a foto.
+   ========================================================= */
+
+/* Base: todos os botões e controles */
+.btn,
+.btn.o,
+.sv-b,
+.chip,
+.hero-search,
+.ar,
+.tg,
+.hb,
+.rv-b {
+  -webkit-backdrop-filter: blur(20px) saturate(190%) brightness(1.06);
+  backdrop-filter: blur(20px) saturate(190%) brightness(1.06);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.12),
+    0 10px 28px rgba(20, 14, 10, 0.16);
+}
+
+/* Fundo claro (padrão): vidro âmbar, texto escuro */
+.btn,
+.btn.o,
+.sv-b,
+.chip,
+.tg,
+.hb,
+.rv-b {
+  background: rgba(184, 116, 44, 0.16);
+  color: #3b220e;
+  border-color: rgba(184, 116, 44, 0.42);
+}
+
+.btn:hover,
+.btn.o:hover,
+.sv-b:hover,
+.rv-b:hover,
+.tg:hover {
+  background: rgba(184, 116, 44, 0.28);
+  color: #2a170a;
+}
+
+:root[data-theme="dark"] .btn,
+:root[data-theme="dark"] .btn.o,
+:root[data-theme="dark"] .sv-b,
+:root[data-theme="dark"] .chip,
+:root[data-theme="dark"] .tg,
+:root[data-theme="dark"] .hb,
+:root[data-theme="dark"] .rv-b {
+  background: rgba(255, 255, 255, 0.09);
+  color: #f3e9d8;
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+/* Sobre a foto do topo e na seção de fechamento: vidro branco */
+.hero .btn,
+.hero .btn.o,
+.hero .chip,
+.hero-search,
+.cta .btn,
+.ar {
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.hero .btn:hover,
+.hero .btn.o:hover,
+.hero .chip:hover,
+.cta .btn:hover,
+.ar:hover {
+  background: rgba(255, 255, 255, 0.26);
+  color: #fff;
+}
+
+.cta .btn {
+  color: #fff;
+}
+
+/* WhatsApp: vidro verde transparente, mantém a identidade */
+.wa {
+  background: rgba(37, 211, 102, 0.55);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.wa:hover {
+  background: rgba(37, 211, 102, 0.7);
+}
+
+
+/* =========================================================
+   LIQUID GLASS (estilo iOS)
+   Transparência, brilho na borda e reflexo na parte de cima.
+   Obs.: a refração real só existe no Safari com filtro SVG;
+   aqui é a versão possível em CSS puro.
+   ========================================================= */
+.btn,
+.btn.o,
+.sv-b,
+.chip,
+.hero-search,
+.hdr-search,
+.hdr-cta,
+.sbtn,
+.tg,
+.hb,
+.ar,
+.rv-b,
+.wa {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  -webkit-backdrop-filter: blur(6px) saturate(180%) brightness(1.06);
+  backdrop-filter: blur(6px) saturate(180%) brightness(1.06);
+  background: linear-gradient(135deg, rgba(255,255,255,.38) 0%, rgba(255,255,255,.08) 42%, rgba(255,255,255,.22) 100%);
+  border: 1px solid rgba(255,255,255,.6);
+  box-shadow:
+    inset 0 1px 1px rgba(255,255,255,.85),
+    inset 0 -1px 1px rgba(0,0,0,.08),
+    inset 1px 0 1px rgba(255,255,255,.3),
+    0 10px 30px rgba(20,14,10,.16);
+  transition: background .3s ease, transform .2s ease, box-shadow .3s ease, opacity .3s ease;
+}
+
+/* reflexo de luz no topo */
+.btn::before,
+.btn.o::before,
+.sv-b::before,
+.chip::before,
+.hero-search::before,
+.hdr-search::before,
+.hdr-cta::before,
+.sbtn::before,
+.tg::before,
+.hb::before,
+.ar::before,
+.rv-b::before,
+.wa::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: radial-gradient(120% 60% at 30% 0%, rgba(255,255,255,.55), rgba(255,255,255,0) 55%);
+  pointer-events: none;
+}
+
+/* Fundo claro: vidro claro com texto escuro */
+.btn,
+.btn.o,
+.chip,
+.sbtn,
+.tg,
+.hb,
+.hdr-search,
+.hdr-cta {
+  color: #2a170a;
+}
+
+/* Botão principal: vidro âmbar */
+.btn:not(.o),
+.sv-b,
+.hdr-cta {
+  background: linear-gradient(135deg, rgba(184,116,44,.82) 0%, rgba(107,63,29,.66) 60%, rgba(184,116,44,.78) 100%);
+  color: #fff;
+  border-color: rgba(255,255,255,.45);
+  text-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+
+.btn:not(.o):hover,
+.sv-b:hover,
+.hdr-cta:hover {
+  background: linear-gradient(135deg, rgba(200,132,56,.9) 0%, rgba(107,63,29,.78) 60%, rgba(200,132,56,.9) 100%);
+  transform: translateY(-1px);
+}
+
+/* WhatsApp: vidro verde */
+.wa {
+  background: linear-gradient(135deg, rgba(37,211,102,.85), rgba(18,140,70,.7));
+  color: #fff;
+  border-color: rgba(255,255,255,.5);
+}
+
+/* Sobre a foto do topo e na seção de fechamento: vidro branco */
+.hero .btn,
+.hero .btn.o,
+.hero .chip,
+.hero-search,
+.cta .btn,
+.ar {
+  background: linear-gradient(135deg, rgba(255,255,255,.34) 0%, rgba(255,255,255,.07) 50%, rgba(255,255,255,.2) 100%);
+  color: #fff;
+  border-color: rgba(255,255,255,.58);
+  text-shadow: 0 1px 6px rgba(0,0,0,.25);
+}
+.hero .btn:not(.o) {
+  background: linear-gradient(135deg, rgba(255,255,255,.92) 0%, rgba(255,255,255,.7) 100%);
+  color: #2a170a;
+  text-shadow: none;
+}
+
+/* Modo escuro */
+:root[data-theme="dark"] .btn:not(.hero .btn):not(.o),
+:root[data-theme="dark"] .sv-b,
+:root[data-theme="dark"] .chip,
+:root[data-theme="dark"] .sbtn,
+:root[data-theme="dark"] .tg,
+:root[data-theme="dark"] .hb,
+:root[data-theme="dark"] .hdr-search,
+:root[data-theme="dark"] .hdr-cta,
+:root[data-theme="dark"] .btn.o {
+  background: linear-gradient(135deg, rgba(255,255,255,.2) 0%, rgba(255,255,255,.04) 50%, rgba(255,255,255,.12) 100%);
+  color: #f3e9d8;
+  border-color: rgba(255,255,255,.28);
+}
+
+
+/* =========================================================
+   Cabeçalho compacto ao rolar (desktop)
+   Ao rolar, os links viram ícones redondos logo ao lado do
+   logo, e a busca sobe ao lado deles.
+   ========================================================= */
+header .wrap {
+  transition: height .35s cubic-bezier(.2,.7,.2,1);
+}
+.logo {
+  transition: font-size .35s ease;
+}
+header.is-compact .wrap {
+  height: 56px;
+}
+header.is-compact .logo {
+  font-size: 17px;
+}
+
+/* Agendar: texto -> círculo com ícone (todas as telas) */
+.hdr-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  transition: padding .35s cubic-bezier(.2,.7,.2,1), width .35s cubic-bezier(.2,.7,.2,1), gap .35s ease, border-radius .35s ease;
+}
+.hdr-cta .ico {
+  flex: none;
+  transition: width .35s ease, opacity .25s ease;
+}
+.hdr-cta .lbl {
+  display: inline-block;
+  max-width: 200px;
+  overflow: hidden;
+  transition: max-width .35s cubic-bezier(.2,.7,.2,1), opacity .25s ease;
+}
+header.is-compact .hdr-cta {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  justify-content: center;
+  gap: 0;
+  border-radius: 50%;
+}
+header.is-compact .hdr-cta .ico {
+  width: 18px;
+  opacity: 1;
+}
+header.is-compact .hdr-cta .lbl {
+  max-width: 0;
+  opacity: 0;
+}
+
+/* Busca: escondida até o estado compacto (só desktop) */
+.hdr-search {
+  display: none;
+}
+
+@keyframes sRise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (min-width: 900px) {
+  /* tudo junto, à esquerda, logo ao lado do logo */
+  header .wrap {
+    justify-content: flex-start;
+  }
+  nav {
+    position: static;
+    gap: 26px;
+    transition: gap .35s cubic-bezier(.2,.7,.2,1);
+  }
+  nav a {
+    display: inline-flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 12px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    transition: padding .35s cubic-bezier(.2,.7,.2,1), background .3s ease, border-color .3s ease, box-shadow .3s ease, color .2s ease;
+  }
+  nav .nico {
+    flex: none;
+    width: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: width .35s cubic-bezier(.2,.7,.2,1), opacity .25s ease, margin .35s ease;
+  }
+  nav .nlbl {
+    display: inline-block;
+    max-width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: max-width .35s cubic-bezier(.2,.7,.2,1), opacity .25s ease;
+  }
+
+  /* compacto: links viram ícones em vidro, ao lado do logo */
+  header.is-compact nav {
+    gap: 8px;
+  }
+  header.is-compact nav a {
+    width: 40px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 50%;
+    -webkit-backdrop-filter: blur(6px) saturate(180%) brightness(1.06);
+    backdrop-filter: blur(6px) saturate(180%) brightness(1.06);
+    background: linear-gradient(135deg, rgba(255,255,255,.38) 0%, rgba(255,255,255,.08) 42%, rgba(255,255,255,.22) 100%);
+    border-color: rgba(255,255,255,.6);
+    box-shadow: inset 0 1px 1px rgba(255,255,255,.85), inset 0 -1px 1px rgba(0,0,0,.08), 0 8px 22px rgba(20,14,10,.14);
+    color: #2a170a;
+  }
+  header.is-compact nav .nico {
+    width: 18px;
+    opacity: 1;
+  }
+  header.is-compact nav .nlbl {
+    max-width: 0;
+    opacity: 0;
+  }
+
+  /* busca sobe ao lado dos ícones */
+  .hdr-search {
+    display: none;
+    align-items: center;
+    gap: 10px;
+    height: 40px;
+    width: 280px;
+    margin-left: 8px;
+    padding: 0 14px;
+    border-radius: 999px;
+    font: inherit;
+    font-size: 14px;
+    text-align: left;
+    color: #2a170a;
+    cursor: pointer;
+    -webkit-backdrop-filter: blur(6px) saturate(180%) brightness(1.06);
+    backdrop-filter: blur(6px) saturate(180%) brightness(1.06);
+    background: linear-gradient(135deg, rgba(255,255,255,.38) 0%, rgba(255,255,255,.08) 42%, rgba(255,255,255,.22) 100%);
+    border: 1px solid rgba(255,255,255,.6);
+    box-shadow: inset 0 1px 1px rgba(255,255,255,.85), 0 8px 22px rgba(20,14,10,.14);
+  }
+  header.is-compact .hdr-search {
+    display: inline-flex;
+    animation: sRise .5s cubic-bezier(.2,.7,.2,1) both;
+  }
+  .hdr-search .hs-t {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    opacity: .75;
+  }
+  .hdr-search .kbd-hint {
+    font-size: 11px;
+    padding: 2px 7px;
+    border-radius: 6px;
+    border: 1px solid rgba(0,0,0,.12);
+    opacity: .7;
+  }
+
+  /* o botão de lupa some: a busca já está visível */
+  header.is-compact .sbtn {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  header .wrap,
+  .hdr-cta,
+  .hdr-cta .lbl,
+  nav,
+  nav a,
+  nav .nico,
+  nav .nlbl,
+  .hdr-search {
+    transition: none;
+    animation: none;
+  }
+}
+
+/* =========================================================
+   LIQUID GLASS (técnica do exemplo "Get started")
+   Bordas com brilho interno, blur leve, reflexo diagonal nas
+   quinas e borda desfocada. Sem contrast(3) para não pesar
+   as cores do site.
+   ========================================================= */
+.btn,
+.btn.o,
+.sv-b,
+.chip,
+.hero-search,
+.hdr-search,
+.hdr-cta,
+.sbtn,
+.tg,
+.hb,
+.ar,
+.rv-b,
+.wa {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow:
+    inset 2px -2px 1px -1px rgba(255, 255, 255, 0.9),
+    inset -2px 2px 1px -1px rgba(255, 255, 255, 0.9),
+    inset 6px -6px 1px -6px rgba(255, 255, 255, 0.55),
+    inset -6px 6px 1px -6px rgba(255, 255, 255, 0.55),
+    inset 0 0 2px rgba(0, 0, 0, 0.25),
+    0 4px 8px rgba(0, 0, 0, 0.18);
+}
+
+/* borda interna desfocada */
+.btn::before,
+.btn.o::before,
+.sv-b::before,
+.chip::before,
+.hero-search::before,
+.hdr-search::before,
+.hdr-cta::before,
+.sbtn::before,
+.tg::before,
+.hb::before,
+.ar::before,
+.rv-b::before,
+.wa::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  border-radius: inherit;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  filter: blur(8px);
+  pointer-events: none;
+  background: none;
+}
+
+/* reflexo diagonal nas quinas */
+.btn::after,
+.btn.o::after,
+.sv-b::after,
+.chip::after,
+.hero-search::after,
+.hdr-search::after,
+.hdr-cta::after,
+.sbtn::after,
+.tg::after,
+.hb::after,
+.ar::after,
+.rv-b::after,
+.wa::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  filter: blur(7px);
+  pointer-events: none;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.8) 0%,
+    transparent 15%,
+    transparent 85%,
+    rgba(255, 255, 255, 0.8) 100%
+  );
+}
+
+/* Principal: vidro escuro-âmbar transparente, texto branco */
+.btn:not(.o),
+.sv-b,
+.hdr-cta {
+  background: rgba(107, 63, 29, 0.55);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.35);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* WhatsApp: vidro verde transparente */
+.wa {
+  background: rgba(37, 211, 102, 0.55);
+  color: #fff;
+}
+
+/* Sobre a foto do topo e no fechamento: vidro branco */
+.hero .btn,
+.hero .btn.o,
+.hero .chip,
+.hero-search,
+.cta .btn,
+.ar {
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
+}
+.hero .btn:not(.o) {
+  background: rgba(255, 255, 255, 0.85);
+  color: #2a170a;
+  text-shadow: none;
+}
+
+/* Modo escuro */
+:root[data-theme="dark"] .btn:not(.o):not(.hero .btn),
+:root[data-theme="dark"] .sv-b,
+:root[data-theme="dark"] .chip,
+:root[data-theme="dark"] .sbtn,
+:root[data-theme="dark"] .tg,
+:root[data-theme="dark"] .hb,
+:root[data-theme="dark"] .hdr-search,
+:root[data-theme="dark"] .hdr-cta {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f3e9d8;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Links compactos no cabeçalho ganham o mesmo vidro */
+header.is-compact nav a {
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow:
+    inset 2px -2px 1px -1px rgba(255, 255, 255, 0.9),
+    inset -2px 2px 1px -1px rgba(255, 255, 255, 0.9),
+    inset 6px -6px 1px -6px rgba(255, 255, 255, 0.55),
+    inset -6px 6px 1px -6px rgba(255, 255, 255, 0.55),
+    0 4px 8px rgba(0, 0, 0, 0.12);
+}
+header.is-compact nav a::before,
+header.is-compact nav a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
+}
+header.is-compact nav a::before {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  filter: blur(6px);
+  inset: 3px 6px auto;
+  height: calc(100% - 6px);
+}
+header.is-compact nav a::after {
+  filter: blur(6px);
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.8) 0%, transparent 15%, transparent 85%, rgba(255, 255, 255, 0.8) 100%);
+}
+
+/* =========================================================
+   CORREÇÕES: posicionamento, botões sólidos e contraste
+   ========================================================= */
+
+/* Logo em uma linha */
+.logo {
+  white-space: nowrap;
+}
+
+/* Setas dos carrosséis: sempre posicionadas sobre a foto */
+.ar {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* WhatsApp flutuante: redondo, sólido, com o ícone */
+.wa {
+  position: fixed;
+  right: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  z-index: 20;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #25d366;
+  border: 0;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.wa::before,
+.wa::after {
+  content: none;
+}
+.wa:hover {
+  background: #25d366;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+}
+.wa svg {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+}
+@media (max-width: 640px) {
+  .wa {
+    padding: 0;
+    font-size: 0;
+  }
+}
+
+/* Botões sólidos (sem vidro): Agendar horário, Enviar interesse e CTA final */
+.sv-b,
+#trabalhe .btn,
+.cta .btn {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  text-shadow: none;
+}
+.sv-b::before,
+.sv-b::after,
+#trabalhe .btn::before,
+#trabalhe .btn::after,
+.cta .btn::before,
+.cta .btn::after {
+  content: none;
+}
+.sv-b {
+  background: var(--accent);
+  color: #fff;
+}
+.sv-b:hover {
+  background: var(--accent2);
+  color: #fff;
+}
+#trabalhe .btn {
+  background: var(--accent2);
+  color: #fff;
+}
+#trabalhe .btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+.cta .btn {
+  background: #fff;
+  color: var(--accent2);
+}
+.cta .btn:hover {
+  background: #f3e3c6;
+  color: var(--accent2);
+}
+
+/* Agendar do cabeçalho: ícone e texto lado a lado, sem sobreposição */
+.hdr-cta {
+  gap: 8px;
+  padding: 8px 16px;
+}
+.hdr-cta .ico {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  margin: 0;
+  opacity: 1;
+}
+.hdr-cta .lbl {
+  max-width: 200px;
+  opacity: 1;
+}
+header.is-compact .hdr-cta .ico {
+  width: 18px;
+  height: 18px;
+}
+
+/* Busca do cabeçalho: texto escuro para contraste sobre o creme */
+.hdr-search,
+.hdr-search .hs-t,
+.hdr-search .kbd-hint {
+  color: #2a170a;
+}
+.hdr-search .hs-t {
+  opacity: 0.85;
+}
+:root[data-theme="dark"] .hdr-search,
+:root[data-theme="dark"] .hdr-search .hs-t,
+:root[data-theme="dark"] .hdr-search .kbd-hint {
+  color: #f3e9d8;
+}

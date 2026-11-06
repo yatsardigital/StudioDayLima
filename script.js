@@ -246,7 +246,7 @@ function makeInfinite(track, onChange) {
    "when" é opcional (ex.: "há 2 semanas").
    ========================================================= */
 (function () {
-  var REVIEWS = [
+  var REVIEWS = (window.SITE_CONTENT && window.SITE_CONTENT.reviews) || [
     { n: 'Cliente 1', t: 'Atendimento maravilhoso e unhas perfeitas!', s: 5 },
     { n: 'Cliente 2', t: 'Ambiente lindo e super acolhedor. Voltarei sempre.', s: 5 },
     { n: 'Cliente 3', t: 'Duração incrível da esmaltação. Recomendo!', s: 5 },
@@ -966,4 +966,28 @@ function makeInfinite(track, onChange) {
   [].forEach.call(document.querySelectorAll('.kbd-hint'), function (k) {
     k.textContent = isApple ? '⌘K' : 'Ctrl K';
   });
+})();
+
+/* =========================================================
+   Cabeçalho compacto ao rolar
+   Liga em 140px e desliga abaixo de 60px (evita piscar).
+   ========================================================= */
+(function () {
+  var header = document.querySelector('header');
+  if (!header) return;
+  var compact = false;
+
+  function update() {
+    var y = window.scrollY;
+    if (!compact && y > 140) {
+      compact = true;
+      header.classList.add('is-compact');
+    } else if (compact && y < 60) {
+      compact = false;
+      header.classList.remove('is-compact');
+    }
+  }
+
+  window.addEventListener('scroll', update, { passive: true });
+  update();
 })();

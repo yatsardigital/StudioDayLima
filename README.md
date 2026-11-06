@@ -77,3 +77,29 @@ Não encontrei nos prints os nomes das fontes de cada seção. Por isso o site c
 - `README.md`: este arquivo.
 
 **Regra de ouro:** mantenha a pasta `img/` do lado do `index.html`. Se ela ficar em outro lugar, as fotos não aparecem.
+
+---
+
+## 4. Painel do site (admin)
+
+Agora o site tem um painel para trocar os textos sem mexer no código.
+
+**Como entrar**
+1. Abra o arquivo `admin.html` no navegador (com o Live Server, ou no site publicado, acrescentando `/admin.html` no fim do endereço).
+2. A senha inicial é **studio2026**.
+
+**Como trocar um texto**
+1. Entre no painel e mude o que quiser: WhatsApp, endereço, horários, textos do topo, valores, sobre nós e depoimentos.
+2. Clique em **Baixar content.js**. Um arquivo novo é baixado.
+3. Substitua o arquivo `content.js` antigo da pasta do projeto pelo que você baixou, e envie a pasta atualizada para onde o site está publicado.
+4. Atualize a página do site.
+
+**Regras importantes**
+- Os campos do WhatsApp só aceitam números. Use o formato 55 + DDD + número, por exemplo `5511976652392`.
+- Depoimentos só com permissão das clientes.
+- O painel é uma proteção simples. Qualquer pessoa que veja o código-fonte consegue descobrir a senha. Para uma proteção de verdade, seria preciso um serviço com login (por exemplo, o Decap CMS com login do GitHub). Se quiser, posso montar essa versão.
+
+**Arquivos ligados ao painel**
+- `admin.html`: o painel.
+- `content.js`: todos os textos editáveis. Só altere por meio do painel.
+- `cms.js`: aplica os textos de `content.js` no site. Não precisa mexer.

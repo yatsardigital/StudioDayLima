@@ -18,28 +18,17 @@
           Studio Day Lima
         </a>
         <nav>
-          <a href="#sobre">
-            Quem somos
-          </a>
-          <a href="#servicos">
-            Procedimentos
-          </a>
-          <a href="#depoimentos">
-            Depoimentos
-          </a>
-          <a href="#localizacao">
-            Localização
-          </a>
-          <a href="#trabalhe">
-            Trabalhe conosco
-          </a>
+          <a href="#sobre" aria-label="Quem somos" title="Quem somos"><svg class="nico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg><span class="nlbl">Quem somos</span></a>
+          <a href="#servicos" aria-label="Procedimentos" title="Procedimentos"><svg class="nico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/></svg><span class="nlbl">Procedimentos</span></a>
+          <a href="#depoimentos" aria-label="Depoimentos" title="Depoimentos"><svg class="nico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.8l-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg><span class="nlbl">Depoimentos</span></a>
+          <a href="#localizacao" aria-label="Localização" title="Localização"><svg class="nico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span class="nlbl">Localização</span></a>
+          <a href="#trabalhe" aria-label="Trabalhe conosco" title="Trabalhe conosco"><svg class="nico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg><span class="nlbl">Trabalhe conosco</span></a>
+        <button aria-haspopup="dialog" class="hdr-search" data-search type="button"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="hs-t">Buscar procedimentos e horários</span><kbd aria-hidden="true" class="kbd-hint">Ctrl K</kbd></button>
         </nav>
         <button aria-haspopup="dialog" aria-label="Buscar no site" class="sbtn" data-search type="button">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
         </button>
-        <a class="btn" href="https://wa.me/5511976652392?text=Ol%C3%A1%21+Vim+do+site+e+quero+agendar+um+hor%C3%A1rio" rel="noopener" target="_blank">
-          Agendar
-        </a>
+        <a class="btn hdr-cta" href="https://wa.me/5511976652392?text=Ol%C3%A1%21+Vim+do+site+e+quero+agendar+um+hor%C3%A1rio" rel="noopener" target="_blank" aria-label="Agendar pelo WhatsApp"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.6A8.5 8.5 0 1 1 21 11.5z"/></svg><span class="lbl">Agendar</span></a>
         <button aria-label="Alternar tema claro e escuro" class="tg" id="tg">
           🌙
         </button>
@@ -59,13 +48,13 @@
       </div>
       <div class="wrap hero-in">
         <div class="hero-copy">
-          <p class="hero-kicker">
+          <p class="hero-kicker" data-cms="hero.kicker">
             Studio Day Lima, em Suzano
           </p>
-          <h1>
+          <h1 data-cms="hero.title">
             Beleza em cada detalhe, carinho em cada experiência.
           </h1>
-          <p class="hero-sub">
+          <p class="hero-sub" data-cms="hero.text">
             Mais do que um momento de beleza, o Studio Day Lima oferece uma experiência de cuidado, conforto e acolhimento. Cada detalhe é pensado com carinho para que você se sinta especial em cada visita.
           </p>
           <div class="hero-cta">
@@ -86,7 +75,7 @@
           <div class="chips">
             <span class="chip" id="openNow">
               <i aria-hidden="true" class="dot"></i>
-              <span>Seg a sex, 9h às 19h</span>
+              <span data-cms="hours.chip">Seg a sex, 9h às 19h</span>
             </span>
             <a class="chip" href="#localizacao">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
@@ -100,26 +89,26 @@
       <div class="wrap">
         <div class="grid">
           <div class="card">
-            <h3>
+            <h3 data-cms="values.0.title">
               Qualidade
             </h3>
-            <p>
+            <p data-cms="values.0.text">
               Selecionamos cuidadosamente nossos produtos, priorizando a qualidade e o cuidado que sua beleza merece.
             </p>
           </div>
           <div class="card">
-            <h3>
+            <h3 data-cms="values.1.title">
               Atenção
             </h3>
-            <p>
+            <p data-cms="values.1.text">
               Cada cliente é única. Por isso, dedicamos atenção a cada detalhe para oferecer um atendimento personalizado e acolhedor.
             </p>
           </div>
           <div class="card">
-            <h3>
+            <h3 data-cms="values.2.title">
               Conforto
             </h3>
-            <p>
+            <p data-cms="values.2.text">
               Preparamos cada espaço para que você desfrute de momentos de tranquilidade, conforto e bem-estar durante sua experiência conosco.
             </p>
           </div>
@@ -150,16 +139,16 @@
           <div class="eyebrow">
             Sobre nós
           </div>
-          <h2>
+          <h2 data-cms="about.title">
             Mais que beleza, um momento para você.
           </h2>
-          <p>
+          <p data-cms="about.paragraphs.0">
             O Studio Day Lima nasceu com o propósito de oferecer em Suzano uma experiência de beleza que vai além da estética: um momento de cuidado, conforto e bem-estar.
           </p>
-          <p>
+          <p data-cms="about.paragraphs.1">
             Nossa equipe é formada por profissionais dedicadas, que valorizam cada detalhe, desde a higiene e a qualidade dos serviços até o atendimento personalizado. Queremos que cada cliente se sinta acolhida, confiante e especial.
           </p>
-          <p>
+          <p data-cms="about.paragraphs.2">
             Aqui, sua beleza é valorizada com carinho, dedicação e excelência. Mais do que cuidar de você por fora, queremos proporcionar uma experiência que faça você se sentir bem por inteiro.
           </p>
         </div>
@@ -535,7 +524,7 @@
             <dt>
               Endereço
             </dt>
-            <dd>
+            <dd data-cms="contact.address">
               Rua Exemplo, 000 – Centro
               <br/>
               Suzano – SP
@@ -543,7 +532,7 @@
             <dt>
               Atendimento
             </dt>
-            <dd>
+            <dd data-cms="contact.hours">
               Segunda a sexta, 9h às 19h
               <br/>
               Sábado, 9h às 16h
@@ -551,7 +540,7 @@
             <dt>
               WhatsApp
             </dt>
-            <dd>
+            <dd data-cms="contact.phone">
               (11) 97665-2392
             </dd>
             <p style="margin-top:20px">
@@ -657,10 +646,10 @@
             <h4>
               Atendimento
             </h4>
-            Rua Exemplo, 000 – Suzano – SP
+            <span data-cms="footer.address">Rua Exemplo, 000 – Suzano – SP</span>
             <br/>
-            Seg a sex, 9h às 19h · Sáb, 9h às 16h
-          </div>
+            <span data-cms="footer.hours">Seg a sex, 9h às 19h · Sáb, 9h às 16h
+          </span></div>
         </div>
         © 2026 Studio Day Lima. Todos os direitos reservados.
       </div>
@@ -668,9 +657,7 @@
     <div class="bub">
       Olá 👋 Como podemos te ajudar?
     </div>
-    <a class="wa" href="https://wa.me/5511976652392" rel="noopener" target="_blank">
-      Dúvidas no WhatsApp
-    </a>
+    <a class="wa" aria-label="Falar no WhatsApp" href="https://wa.me/5511976652392" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
     <div class="sp" hidden id="sp">
       <div class="sp-scrim" data-close></div>
       <div aria-label="Buscar no site" aria-modal="true" class="sp-panel" role="dialog">
@@ -688,7 +675,8 @@
         <div aria-live="polite" class="sr" id="spst"></div>
       </div>
     </div>
-    <script src="script.js">
-    </script>
+    <script src="content.js"></script>
+    <script src="cms.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
