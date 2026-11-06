@@ -2442,3 +2442,32 @@ header.is-compact .hdr-cta .ico {
 :root[data-theme="dark"] .hdr-search .kbd-hint {
   color: #f3e9d8;
 }
+
+/* Agendar do cabeçalho: centralizado na vertical e no alinhamento */
+header .wrap {
+  align-items: center;
+}
+header .hdr-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  margin: 0;
+  padding: 0 18px;
+  line-height: 1;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+header .hdr-cta .lbl {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  vertical-align: middle;
+}
+header .hdr-cta .ico {
+  display: block;
+}
+header.is-compact .hdr-cta {
+  height: 40px;
+  padding: 0;
+}
