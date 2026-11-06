@@ -2764,3 +2764,204 @@ header.is-compact a.hdr-cta {
     right: 6px;
   }
 }
+
+/* =========================================================
+   LOGO (Studio DAY LIMA) com A em triângulo, sem traço
+   ========================================================= */
+.wm {
+  font-family: 'Jost', system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--accent2);
+  white-space: nowrap;
+  line-height: 1;
+}
+.wm-a {
+  display: inline-block;
+  width: 0.78em;
+  height: 0.72em;
+  margin: 0 0.02em;
+  overflow: visible;
+  vertical-align: baseline;
+}
+.wm-a path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3.2;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+}
+.logo .wm {
+  font-size: 22px;
+}
+header.is-compact .logo .wm {
+  font-size: 18px;
+}
+
+/* Logo no topo da hero */
+.hero-logo {
+  margin-bottom: 18px;
+}
+.hero-logo .wm {
+  font-size: clamp(38px, 6vw, 60px);
+  color: #fff;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
+}
+
+/* Chip de aberto/fechado: centralizado e sozinho */
+.hero-dock .chips {
+  justify-content: center;
+}
+
+/* Celular: logo do cabeçalho um pouco menor */
+@media (max-width: 899px) {
+  .logo .wm {
+    font-size: 17px;
+  }
+  header.is-compact .logo .wm {
+    font-size: 15px;
+  }
+}
+
+/* Triângulo do A com a mesma espessura das letras (escala com o tamanho da fonte) */
+.wm-a path {
+  stroke-width: 0.075em;
+  vector-effect: non-scaling-stroke;
+}
+
+/* A cópia da busca só existe no celular: some no computador */
+@media (min-width: 900px) {
+  header .hdr-search-m {
+    display: none;
+  }
+}
+
+/* =========================================================
+   LOGO: traço do triângulo da mesma espessura das letras
+   ========================================================= */
+.wm-a path {
+  stroke-width: 4.4;
+}
+
+/* =========================================================
+   CABEÇALHO: a busca do celular não aparece no desktop
+   ========================================================= */
+@media (min-width: 900px) {
+  header .hdr-search.hdr-search-m {
+    display: none;
+  }
+}
+
+/* =========================================================
+   GALERIA: duas linhas em loop contínuo, em sentidos opostos
+   ========================================================= */
+.gal-rows {
+  display: grid;
+  gap: 16px;
+  overflow: hidden;
+}
+.gal-row {
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+}
+.gal-track {
+  display: flex;
+  width: max-content;
+  animation: galLeft 110s linear infinite;
+  will-change: transform;
+}
+.gal-row.to-right .gal-track {
+  animation-name: galRight;
+}
+.gal-row.paused .gal-track {
+  animation-play-state: paused;
+}
+.gal-set {
+  display: flex;
+  gap: 14px;
+  padding-right: 14px;
+}
+.gal-set img {
+  flex: none;
+  width: 230px;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  cursor: zoom-in;
+  transition: transform .3s ease;
+}
+.gal-set img:hover {
+  transform: scale(1.03);
+}
+@keyframes galLeft {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes galRight {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+/* Visualização ampliada da foto */
+.lb {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(10, 6, 4, 0.88);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s ease, visibility .3s ease;
+}
+.lb.open {
+  opacity: 1;
+  visibility: visible;
+}
+.lb img {
+  max-width: 92vw;
+  max-height: 88vh;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  transform: scale(.88);
+  transition: transform .35s cubic-bezier(.2,.7,.2,1);
+}
+.lb.open img {
+  transform: scale(1);
+}
+.lb-x {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255,255,255,.4);
+  border-radius: 50%;
+  background: rgba(255,255,255,.14);
+  color: #fff;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* Celular: fotos menores na galeria */
+@media (max-width: 640px) {
+  .gal-set img {
+    width: 180px;
+    height: 230px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gal-track {
+    animation: none;
+  }
+  .gal-row {
+    overflow-x: auto;
+  }
+}

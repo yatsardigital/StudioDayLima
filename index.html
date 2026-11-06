@@ -6,6 +6,9 @@
     <script>
       document.documentElement.classList.add("js")
     </script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap" rel="stylesheet"/>
     <title>
       Studio Day Lima – Esmalteria em Suzano
     </title>
@@ -14,9 +17,7 @@
   <body>
     <header>
       <div class="wrap">
-        <a class="logo" href="#inicio">
-          Studio Day Lima
-        </a>
+        <a class="logo" href="#inicio"><span class="wm" aria-label="Studio Day Lima"><span class="wm-s">Studio</span> <span class="wm-c">D<svg class="wm-a" viewBox="0 0 40 40" aria-hidden="true"><path d="M2 38 L20 3 L38 38"/></svg>Y LIM<svg class="wm-a" viewBox="0 0 40 40" aria-hidden="true"><path d="M2 38 L20 3 L38 38"/></svg></span></span></a>
         <nav>
           <a href="#sobre" aria-label="Quem somos" title="Quem somos"><svg class="nico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg><span class="nlbl">Quem somos</span></a>
           <a href="#servicos" aria-label="Procedimentos" title="Procedimentos"><svg class="nico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/></svg><span class="nlbl">Procedimentos</span></a>
@@ -49,39 +50,20 @@
       </div>
       <div class="wrap hero-in">
         <div class="hero-copy">
-          <p class="hero-kicker" data-cms="hero.kicker">
-            Studio Day Lima, em Suzano
-          </p>
+          <div class="hero-logo"><span class="wm" data-logo="hero" aria-label="Studio Day Lima"><span class="wm-s">Studio</span> <span class="wm-c">D<svg class="wm-a" viewBox="0 0 40 40" aria-hidden="true"><path d="M2 38 L20 3 L38 38"/></svg>Y LIM<svg class="wm-a" viewBox="0 0 40 40" aria-hidden="true"><path d="M2 38 L20 3 L38 38"/></svg></span></span></div>
           <h1 data-cms="hero.title">
             Beleza em cada detalhe, carinho em cada experiência.
           </h1>
           <p class="hero-sub" data-cms="hero.text">
             Mais do que um momento de beleza, o Studio Day Lima oferece uma experiência de cuidado, conforto e acolhimento. Cada detalhe é pensado com carinho para que você se sinta especial em cada visita.
           </p>
-          <div class="hero-cta">
-            <a class="btn" href="#servicos">
-              Ver serviços
-            </a>
-            <a class="hero-link" href="https://wa.me/5511976652392?text=Ol%C3%A1%21+Vim+do+site+e+quero+agendar+um+hor%C3%A1rio" rel="noopener" target="_blank">
-              Agendar pelo WhatsApp <span aria-hidden="true">›</span>
-            </a>
-          </div>
         </div>
         <div class="hero-dock">
-          <button aria-haspopup="dialog" class="hero-search" data-search type="button">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-            <span class="hs-t">Buscar procedimentos e horários</span>
-            <kbd aria-hidden="true" class="kbd-hint">Ctrl K</kbd>
-          </button>
           <div class="chips">
             <span class="chip" id="openNow">
               <i aria-hidden="true" class="dot"></i>
               <span data-cms="hours.chip">Seg a sex, 9h às 19h</span>
             </span>
-            <a class="chip" href="#localizacao">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
-              Suzano, SP
-            </a>
           </div>
         </div>
       </div>
@@ -188,13 +170,13 @@
             </div>
             <div class="sv-d">
               <h3>
-                Unhas de gel
+                Alongamento (de gel ou com gel)
               </h3>
               <p>
                 Alongamento que une beleza, resistência e naturalidade, com o formato e acabamento que combinam com você.
               </p>
             </div>
-            <a class="sv-b" href="https://wa.me/5511976652392?text=Ol%C3%A1%2C+tudo+bem%3F+Vim+do+site%2C+gostaria+de+agendar+um+hor%C3%A1rio+para+Unhas+de+Gel." rel="noopener" target="_blank">
+            <a class="sv-b" href="https://wa.me/5511976652392?text=Ol%C3%A1%2C+tudo+bem%3F+Vim+do+site%2C+gostaria+de+agendar+um+hor%C3%A1rio+para+Alongamento+(de+gel+ou+com+gel)." rel="noopener" target="_blank">
               Agendar horário →
             </a>
           </article>
@@ -206,7 +188,8 @@
               <div class="sv-s">
                 <img alt="Esmaltação em gel 2" loading="lazy" src="img/esmaltacao-02.webp"/>
               </div>
-              <button aria-label="Foto anterior" class="ar l" type="button">‹</button><button aria-label="Próxima foto" class="ar r" type="button">›</button><div class="sv-dots">
+              <div class="sv-s"><img alt="Esmaltação em gel 3" loading="lazy" src="img/esmaltacao-03.webp"/></div>
+<button aria-label="Foto anterior" class="ar l" type="button">‹</button><button aria-label="Próxima foto" class="ar r" type="button">›</button><div class="sv-dots">
               </div>
             </div>
             <div class="sv-d">
@@ -413,36 +396,11 @@
             Nossos trabalhos
           </h2>
           <p>
-            Coloque aqui as fotos das suas unhas.
+            Alguns dos nossos trabalhos.
           </p>
         </div>
-        <div class="gal">
-          <div>
-            <img alt="Trabalho do salão 1" loading="lazy" src="img/galeria-01.webp"/>
-          </div>
-          <div>
-            <img alt="Trabalho do salão 2" loading="lazy" src="img/galeria-02.webp"/>
-          </div>
-          <div>
-            <img alt="Trabalho do salão 3" loading="lazy" src="img/galeria-03.webp"/>
-          </div>
-          <div>
-            <img alt="Trabalho do salão 4" loading="lazy" src="img/galeria-04.webp"/>
-          </div>
-          <div>
-            <img alt="Trabalho do salão 5" loading="lazy" src="img/galeria-05.webp"/>
-          </div>
-          <div>
-            <img alt="Trabalho do salão 6" loading="lazy" src="img/galeria-06.webp"/>
-          </div>
-          <div>
-            <img alt="Trabalho do salão 7" loading="lazy" src="img/galeria-07.webp"/>
-          </div>
-          <div>
-            <img alt="Trabalho do salão 8" loading="lazy" src="img/galeria-08.webp"/>
-          </div>
-        </div>
-        <p style="text-align:center;margin-top:24px">
+        <div class="gal-rows"><div class="gal-row to-left" tabindex="0"><div class="gal-track"><div class="gal-set"><img alt="Trabalho do salão 1" data-full="img/galeria-01.webp" loading="lazy" src="img/galeria-01.webp"/><img alt="Trabalho do salão 2" data-full="img/galeria-02.webp" loading="lazy" src="img/galeria-02.webp"/><img alt="Trabalho do salão 3" data-full="img/galeria-03.webp" loading="lazy" src="img/galeria-03.webp"/><img alt="Trabalho do salão 4" data-full="img/galeria-04.webp" loading="lazy" src="img/galeria-04.webp"/><img alt="Trabalho do salão 5" data-full="img/galeria-05.webp" loading="lazy" src="img/galeria-05.webp"/><img alt="Trabalho do salão 6" data-full="img/galeria-06.webp" loading="lazy" src="img/galeria-06.webp"/></div><div class="gal-set"><img alt="Trabalho do salão 1" data-full="img/galeria-01.webp" loading="lazy" src="img/galeria-01.webp"/><img alt="Trabalho do salão 2" data-full="img/galeria-02.webp" loading="lazy" src="img/galeria-02.webp"/><img alt="Trabalho do salão 3" data-full="img/galeria-03.webp" loading="lazy" src="img/galeria-03.webp"/><img alt="Trabalho do salão 4" data-full="img/galeria-04.webp" loading="lazy" src="img/galeria-04.webp"/><img alt="Trabalho do salão 5" data-full="img/galeria-05.webp" loading="lazy" src="img/galeria-05.webp"/><img alt="Trabalho do salão 6" data-full="img/galeria-06.webp" loading="lazy" src="img/galeria-06.webp"/></div><div class="gal-set"><img alt="Trabalho do salão 1" data-full="img/galeria-01.webp" loading="lazy" src="img/galeria-01.webp"/><img alt="Trabalho do salão 2" data-full="img/galeria-02.webp" loading="lazy" src="img/galeria-02.webp"/><img alt="Trabalho do salão 3" data-full="img/galeria-03.webp" loading="lazy" src="img/galeria-03.webp"/><img alt="Trabalho do salão 4" data-full="img/galeria-04.webp" loading="lazy" src="img/galeria-04.webp"/><img alt="Trabalho do salão 5" data-full="img/galeria-05.webp" loading="lazy" src="img/galeria-05.webp"/><img alt="Trabalho do salão 6" data-full="img/galeria-06.webp" loading="lazy" src="img/galeria-06.webp"/></div><div class="gal-set"><img alt="Trabalho do salão 1" data-full="img/galeria-01.webp" loading="lazy" src="img/galeria-01.webp"/><img alt="Trabalho do salão 2" data-full="img/galeria-02.webp" loading="lazy" src="img/galeria-02.webp"/><img alt="Trabalho do salão 3" data-full="img/galeria-03.webp" loading="lazy" src="img/galeria-03.webp"/><img alt="Trabalho do salão 4" data-full="img/galeria-04.webp" loading="lazy" src="img/galeria-04.webp"/><img alt="Trabalho do salão 5" data-full="img/galeria-05.webp" loading="lazy" src="img/galeria-05.webp"/><img alt="Trabalho do salão 6" data-full="img/galeria-06.webp" loading="lazy" src="img/galeria-06.webp"/></div></div></div><div class="gal-row to-right" tabindex="0"><div class="gal-track"><div class="gal-set"><img alt="Trabalho do salão 7" data-full="img/galeria-07.webp" loading="lazy" src="img/galeria-07.webp"/><img alt="Trabalho do salão 8" data-full="img/galeria-08.webp" loading="lazy" src="img/galeria-08.webp"/><img alt="Trabalho do salão 9" data-full="img/galeria-09.webp" loading="lazy" src="img/galeria-09.webp"/><img alt="Trabalho do salão 10" data-full="img/galeria-10.webp" loading="lazy" src="img/galeria-10.webp"/><img alt="Esmaltação em gel" data-full="img/esmaltacao-03.webp" loading="lazy" src="img/esmaltacao-03.webp"/></div><div class="gal-set"><img alt="Trabalho do salão 7" data-full="img/galeria-07.webp" loading="lazy" src="img/galeria-07.webp"/><img alt="Trabalho do salão 8" data-full="img/galeria-08.webp" loading="lazy" src="img/galeria-08.webp"/><img alt="Trabalho do salão 9" data-full="img/galeria-09.webp" loading="lazy" src="img/galeria-09.webp"/><img alt="Trabalho do salão 10" data-full="img/galeria-10.webp" loading="lazy" src="img/galeria-10.webp"/><img alt="Esmaltação em gel" data-full="img/esmaltacao-03.webp" loading="lazy" src="img/esmaltacao-03.webp"/></div><div class="gal-set"><img alt="Trabalho do salão 7" data-full="img/galeria-07.webp" loading="lazy" src="img/galeria-07.webp"/><img alt="Trabalho do salão 8" data-full="img/galeria-08.webp" loading="lazy" src="img/galeria-08.webp"/><img alt="Trabalho do salão 9" data-full="img/galeria-09.webp" loading="lazy" src="img/galeria-09.webp"/><img alt="Trabalho do salão 10" data-full="img/galeria-10.webp" loading="lazy" src="img/galeria-10.webp"/><img alt="Esmaltação em gel" data-full="img/esmaltacao-03.webp" loading="lazy" src="img/esmaltacao-03.webp"/></div><div class="gal-set"><img alt="Trabalho do salão 7" data-full="img/galeria-07.webp" loading="lazy" src="img/galeria-07.webp"/><img alt="Trabalho do salão 8" data-full="img/galeria-08.webp" loading="lazy" src="img/galeria-08.webp"/><img alt="Trabalho do salão 9" data-full="img/galeria-09.webp" loading="lazy" src="img/galeria-09.webp"/><img alt="Trabalho do salão 10" data-full="img/galeria-10.webp" loading="lazy" src="img/galeria-10.webp"/><img alt="Esmaltação em gel" data-full="img/esmaltacao-03.webp" loading="lazy" src="img/esmaltacao-03.webp"/></div></div></div></div>
+<p style="text-align:center;margin-top:24px">
           <a class="btn o" href="https://instagram.com/" rel="noopener" target="_blank">
             Ver mais no Instagram
           </a>
@@ -504,6 +462,9 @@
           <option>
             Comercial
           </option>
+          <option>
+            Manicure e nails designer
+          </option>
         </select>
         <a class="btn" href="#" onclick="this.href='https://wa.me/5511976652392?text='+encodeURIComponent('Olá! Tenho interesse em trabalhar na área: '+document.getElementById('area').value);" rel="noopener" target="_blank">
           Enviar interesse
@@ -526,7 +487,7 @@
               Endereço
             </dt>
             <dd data-cms="contact.address">
-              Rua Exemplo, 000 – Centro
+              Rua Antônio dos Réis, 26
               <br/>
               Suzano – SP
             </dd>
@@ -551,7 +512,7 @@
             </p>
           </dl>
           <div class="map">
-            <iframe loading="lazy" src="https://maps.google.com/maps?q=Suzano%20SP&z=13&output=embed" title="Mapa">
+            <iframe loading="lazy" src="https://maps.google.com/maps?q=Rua%20Ant%C3%B4nio%20dos%20R%C3%A9is%2026%2C%20Suzano%20SP&z=13&output=embed" title="Mapa">
             </iframe>
           </div>
         </div>
@@ -647,7 +608,7 @@
             <h4>
               Atendimento
             </h4>
-            <span data-cms="footer.address">Rua Exemplo, 000 – Suzano – SP</span>
+            <span data-cms="footer.address">Rua Antônio dos Réis, 26 – Suzano – SP</span>
             <br/>
             <span data-cms="footer.hours">Seg a sex, 9h às 19h · Sáb, 9h às 16h
           </span></div>
@@ -679,5 +640,6 @@
     <script src="content.js"></script>
     <script src="cms.js"></script>
     <script src="script.js"></script>
-  </body>
+  <div aria-hidden="true" class="lb" id="lightbox" role="dialog" aria-modal="true"><button aria-label="Fechar" class="lb-x" id="lbClose" type="button">×</button><img alt="" id="lbImg"/></div>
+</body>
 </html>
