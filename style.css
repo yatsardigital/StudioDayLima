@@ -2965,3 +2965,61 @@ header.is-compact .logo .wm {
     overflow-x: auto;
   }
 }
+
+/* =========================================================
+   LOGO EM IMAGEM (Studio Day Lima)
+   Cabeçalho: versão marrom no creme, branca no modo escuro.
+   ========================================================= */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  height: 44px;
+  font-size: 0;
+}
+.logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
+  transition: height .35s ease;
+}
+.logo-img.l-light {
+  display: none;
+}
+:root[data-theme="dark"] .logo-img.l-dark {
+  display: none;
+}
+:root[data-theme="dark"] .logo-img.l-light {
+  display: block;
+}
+header.is-compact .logo-img {
+  height: 32px;
+}
+@media (max-width: 899px) {
+  .logo-img {
+    height: 34px;
+  }
+  header.is-compact .logo-img {
+    height: 28px;
+  }
+}
+
+/* Topo da página */
+.hero-logo {
+  margin-bottom: 18px;
+}
+.hero-logo-img {
+  display: inline-block;
+  height: clamp(90px, 15vw, 150px);
+  width: auto;
+  filter: drop-shadow(0 2px 16px rgba(0,0,0,.35));
+}
+
+/* Rodapé */
+.foot-logo {
+  margin-bottom: 10px;
+}
+.foot-logo img {
+  height: 56px;
+  width: auto;
+  display: block;
+}
