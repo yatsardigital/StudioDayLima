@@ -1052,7 +1052,7 @@ html.tt,html.tt *,html.tt *::before,html.tt *::after {
 }
 /* =========================================================
    Camada estilo Apple
- 
+
    Regra do vidro: uma única camada por vez.
    O vidro aparece só em controles flutuantes (menu, busca, chips,
    setas e pontos dos carrosséis) sobre conteúdo nítido. Nunca sobre
@@ -1082,7 +1082,7 @@ kbd {
   background:rgba(127,127,127,.2);
   color:inherit;
 }
- 
+
 /* ----- Cabeçalho: vidro fosco sobre o conteúdo ----- */
 .sbtn {
   display:inline-flex;
@@ -1153,7 +1153,7 @@ kbd {
     color:var(--text);
   }
 }
- 
+
 /* ----- Hero: foto nítida, texto direto sobre ela ----- */
 .hero {
   position:relative;
@@ -1265,7 +1265,7 @@ kbd {
 .hero :focus-visible {
   outline-color:#fff;
 }
- 
+
 /* entrada do hero: uma sequência só, ao carregar */
 .hero-copy>* {
   animation:up .8s cubic-bezier(.2,.7,.2,1) backwards;
@@ -1282,7 +1282,7 @@ kbd {
 .hero-search,.chip {
   animation:up .8s cubic-bezier(.2,.7,.2,1) .4s backwards;
 }
- 
+
 /* ----- Vidro: busca e chips flutuando sobre a foto ----- */
 .hero-dock {
   display:flex;
@@ -1387,7 +1387,7 @@ a.chip:hover {
     font-size:15px;
   }
 }
- 
+
 /* ----- Carrosséis: setas e pontos em vidro sobre a foto ----- */
 .trk>div {
   scroll-snap-stop:always;
@@ -1435,7 +1435,7 @@ a.chip:hover {
 .sv-dots {
   align-items:center;
 }
- 
+
 /* ----- Busca estilo Spotlight ----- */
 .sp {
   position:fixed;
@@ -1669,7 +1669,7 @@ a.chip:hover {
     box-shadow:0 0 0 0 transparent;
   }
 }
- 
+
 /* Sem suporte a backdrop-filter, o vidro vira fundo sólido */
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))) {
   header {
@@ -1682,7 +1682,7 @@ a.chip:hover {
     background:var(--surface);
   }
 }
- 
+
 /* ----- Hero: faixa de vidro (blur) no terço superior da foto ----- */
 .hero-bg::after {
   content:"";
@@ -1703,7 +1703,7 @@ a.chip:hover {
     background:linear-gradient(180deg,rgba(20,14,10,.55) 0%,rgba(20,14,10,0) 100%);
   }
 }
- 
+
 /* ----- Setas dos carrosséis de serviço (mesmo estilo dos pontos) ----- */
 .sv-ph .ar {
   z-index:3;
@@ -1721,13 +1721,13 @@ a.chip:hover {
 .sv-ph .ar.r {
   right:12px;
 }
- 
+
 /* =========================================================
    Botões em vidro líquido (estilo iOS atual)
    Quase transparente, com blur forte, borda clara e brilho
    no topo. Claro nas seções de fundo claro, branco sobre a foto.
    ========================================================= */
- 
+
 /* Base: todos os botões e controles */
 .btn,
 .btn.o,
@@ -1746,7 +1746,7 @@ a.chip:hover {
     inset 0 -1px 0 rgba(255, 255, 255, 0.12),
     0 10px 28px rgba(20, 14, 10, 0.16);
 }
- 
+
 /* Fundo claro (padrão): vidro âmbar, texto escuro */
 .btn,
 .btn.o,
@@ -1759,7 +1759,7 @@ a.chip:hover {
   color: #3b220e;
   border-color: rgba(184, 116, 44, 0.42);
 }
- 
+
 .btn:hover,
 .btn.o:hover,
 .sv-b:hover,
@@ -1768,7 +1768,7 @@ a.chip:hover {
   background: rgba(184, 116, 44, 0.28);
   color: #2a170a;
 }
- 
+
 :root[data-theme="dark"] .btn,
 :root[data-theme="dark"] .btn.o,
 :root[data-theme="dark"] .sv-b,
@@ -1780,7 +1780,7 @@ a.chip:hover {
   color: #f3e9d8;
   border-color: rgba(255, 255, 255, 0.22);
 }
- 
+
 /* Sobre a foto do topo e na seção de fechamento: vidro branco */
 .hero .btn,
 .hero .btn.o,
@@ -1792,7 +1792,7 @@ a.chip:hover {
   color: #fff;
   border-color: rgba(255, 255, 255, 0.45);
 }
- 
+
 .hero .btn:hover,
 .hero .btn.o:hover,
 .hero .chip:hover,
@@ -1801,23 +1801,23 @@ a.chip:hover {
   background: rgba(255, 255, 255, 0.26);
   color: #fff;
 }
- 
+
 .cta .btn {
   color: #fff;
 }
- 
+
 /* WhatsApp: vidro verde transparente, mantém a identidade */
 .wa {
   background: rgba(37, 211, 102, 0.55);
   color: #fff;
   border-color: rgba(255, 255, 255, 0.5);
 }
- 
+
 .wa:hover {
   background: rgba(37, 211, 102, 0.7);
 }
- 
- 
+
+
 /* =========================================================
    LIQUID GLASS (estilo iOS)
    Transparência, brilho na borda e reflexo na parte de cima.
@@ -1851,7 +1851,7 @@ a.chip:hover {
     0 10px 30px rgba(20,14,10,.16);
   transition: background .3s ease, transform .2s ease, box-shadow .3s ease, opacity .3s ease;
 }
- 
+
 /* reflexo de luz no topo */
 .btn::before,
 .btn.o::before,
@@ -1874,7 +1874,7 @@ a.chip:hover {
   background: radial-gradient(120% 60% at 30% 0%, rgba(255,255,255,.55), rgba(255,255,255,0) 55%);
   pointer-events: none;
 }
- 
+
 /* Fundo claro: vidro claro com texto escuro */
 .btn,
 .btn.o,
@@ -1886,7 +1886,7 @@ a.chip:hover {
 .hdr-cta {
   color: #2a170a;
 }
- 
+
 /* Botão principal: vidro âmbar */
 .btn:not(.o),
 .sv-b,
@@ -1896,21 +1896,21 @@ a.chip:hover {
   border-color: rgba(255,255,255,.45);
   text-shadow: 0 1px 2px rgba(0,0,0,.15);
 }
- 
+
 .btn:not(.o):hover,
 .sv-b:hover,
 .hdr-cta:hover {
   background: linear-gradient(135deg, rgba(200,132,56,.9) 0%, rgba(107,63,29,.78) 60%, rgba(200,132,56,.9) 100%);
   transform: translateY(-1px);
 }
- 
+
 /* WhatsApp: vidro verde */
 .wa {
   background: linear-gradient(135deg, rgba(37,211,102,.85), rgba(18,140,70,.7));
   color: #fff;
   border-color: rgba(255,255,255,.5);
 }
- 
+
 /* Sobre a foto do topo e na seção de fechamento: vidro branco */
 .hero .btn,
 .hero .btn.o,
@@ -1928,7 +1928,7 @@ a.chip:hover {
   color: #2a170a;
   text-shadow: none;
 }
- 
+
 /* Modo escuro */
 :root[data-theme="dark"] .btn:not(.hero .btn):not(.o),
 :root[data-theme="dark"] .sv-b,
@@ -1943,8 +1943,8 @@ a.chip:hover {
   color: #f3e9d8;
   border-color: rgba(255,255,255,.28);
 }
- 
- 
+
+
 /* =========================================================
    Cabeçalho compacto ao rolar (desktop)
    Ao rolar, os links viram ícones redondos logo ao lado do
@@ -1962,7 +1962,7 @@ header.is-compact .wrap {
 header.is-compact .logo {
   font-size: 17px;
 }
- 
+
 /* Agendar: texto -> círculo com ícone (todas as telas) */
 .hdr-cta {
   display: inline-flex;
@@ -1997,12 +1997,12 @@ header.is-compact .hdr-cta .lbl {
   max-width: 0;
   opacity: 0;
 }
- 
+
 /* Busca: escondida até o estado compacto (só desktop) */
 .hdr-search {
   display: none;
 }
- 
+
 @keyframes sRise {
   from {
     opacity: 0;
@@ -2013,7 +2013,7 @@ header.is-compact .hdr-cta .lbl {
     transform: none;
   }
 }
- 
+
 @media (min-width: 900px) {
   /* tudo junto, à esquerda, logo ao lado do logo */
   header .wrap {
@@ -2047,7 +2047,7 @@ header.is-compact .hdr-cta .lbl {
     white-space: nowrap;
     transition: max-width .35s cubic-bezier(.2,.7,.2,1), opacity .25s ease;
   }
- 
+
   /* compacto: links viram ícones em vidro, ao lado do logo */
   header.is-compact nav {
     gap: 8px;
@@ -2072,7 +2072,7 @@ header.is-compact .hdr-cta .lbl {
     max-width: 0;
     opacity: 0;
   }
- 
+
   /* busca sobe ao lado dos ícones */
   .hdr-search {
     display: none;
@@ -2112,13 +2112,13 @@ header.is-compact .hdr-cta .lbl {
     border: 1px solid rgba(0,0,0,.12);
     opacity: .7;
   }
- 
+
   /* o botão de lupa some: a busca já está visível */
   header.is-compact .sbtn {
     display: none;
   }
 }
- 
+
 @media (prefers-reduced-motion: reduce) {
   header .wrap,
   .hdr-cta,
@@ -2132,7 +2132,7 @@ header.is-compact .hdr-cta .lbl {
     animation: none;
   }
 }
- 
+
 /* =========================================================
    LIQUID GLASS (técnica do exemplo "Get started")
    Bordas com brilho interno, blur leve, reflexo diagonal nas
@@ -2167,7 +2167,7 @@ header.is-compact .hdr-cta .lbl {
     inset 0 0 2px rgba(0, 0, 0, 0.25),
     0 4px 8px rgba(0, 0, 0, 0.18);
 }
- 
+
 /* borda interna desfocada */
 .btn::before,
 .btn.o::before,
@@ -2196,7 +2196,7 @@ header.is-compact .hdr-cta .lbl {
   pointer-events: none;
   background: none;
 }
- 
+
 /* reflexo diagonal nas quinas */
 .btn::after,
 .btn.o::after,
@@ -2226,7 +2226,7 @@ header.is-compact .hdr-cta .lbl {
     rgba(255, 255, 255, 0.8) 100%
   );
 }
- 
+
 /* Principal: vidro escuro-âmbar transparente, texto branco */
 .btn:not(.o),
 .sv-b,
@@ -2236,13 +2236,13 @@ header.is-compact .hdr-cta .lbl {
   border-color: rgba(255, 255, 255, 0.35);
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
- 
+
 /* WhatsApp: vidro verde transparente */
 .wa {
   background: rgba(37, 211, 102, 0.55);
   color: #fff;
 }
- 
+
 /* Sobre a foto do topo e no fechamento: vidro branco */
 .hero .btn,
 .hero .btn.o,
@@ -2259,7 +2259,7 @@ header.is-compact .hdr-cta .lbl {
   color: #2a170a;
   text-shadow: none;
 }
- 
+
 /* Modo escuro */
 :root[data-theme="dark"] .btn:not(.o):not(.hero .btn),
 :root[data-theme="dark"] .sv-b,
@@ -2273,7 +2273,7 @@ header.is-compact .hdr-cta .lbl {
   color: #f3e9d8;
   border-color: rgba(255, 255, 255, 0.25);
 }
- 
+
 /* Links compactos no cabeçalho ganham o mesmo vidro */
 header.is-compact nav a {
   backdrop-filter: blur(2px);
@@ -2306,23 +2306,23 @@ header.is-compact nav a::after {
   filter: blur(6px);
   background: linear-gradient(45deg, rgba(255, 255, 255, 0.8) 0%, transparent 15%, transparent 85%, rgba(255, 255, 255, 0.8) 100%);
 }
- 
+
 /* =========================================================
    CORREÇÕES: posicionamento, botões sólidos e contraste
    ========================================================= */
- 
+
 /* Logo em uma linha */
 .logo {
   white-space: nowrap;
 }
- 
+
 /* Setas dos carrosséis: sempre posicionadas sobre a foto */
 .ar {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
- 
+
 /* WhatsApp flutuante: redondo, sólido, com o ícone */
 .wa {
   position: fixed;
@@ -2363,7 +2363,7 @@ header.is-compact nav a::after {
     font-size: 0;
   }
 }
- 
+
 /* Botões sólidos (sem vidro): Agendar horário, Enviar interesse e CTA final */
 .sv-b,
 #trabalhe .btn,
@@ -2406,7 +2406,7 @@ header.is-compact nav a::after {
   background: #f3e3c6;
   color: var(--accent2);
 }
- 
+
 /* Agendar do cabeçalho: ícone e texto lado a lado, sem sobreposição */
 .hdr-cta {
   gap: 8px;
@@ -2427,7 +2427,7 @@ header.is-compact .hdr-cta .ico {
   width: 18px;
   height: 18px;
 }
- 
+
 /* Busca do cabeçalho: texto escuro para contraste sobre o creme */
 .hdr-search,
 .hdr-search .hs-t,
@@ -2442,7 +2442,7 @@ header.is-compact .hdr-cta .ico {
 :root[data-theme="dark"] .hdr-search .kbd-hint {
   color: #f3e9d8;
 }
- 
+
 /* Agendar do cabeçalho: centralizado na vertical e no alinhamento */
 header .wrap {
   align-items: center;
@@ -2471,7 +2471,7 @@ header.is-compact .hdr-cta {
   height: 40px;
   padding: 0;
 }
- 
+
 /* Agendar: estado normal (topo da página) sempre com o texto inteiro */
 header .hdr-cta {
   width: auto;
@@ -2491,7 +2491,7 @@ header .hdr-cta .ico {
   width: 18px;
   opacity: 1;
 }
- 
+
 /* Agendar: estado compacto (ao rolar) como círculo com ícone */
 header.is-compact .hdr-cta {
   width: 40px;
@@ -2506,7 +2506,7 @@ header.is-compact .hdr-cta .lbl {
   overflow: hidden;
   opacity: 0;
 }
- 
+
 /* =========================================================
    AGENDAR IGUAL EM TODAS AS TELAS (celular, tablet, computador)
    Mesmo tamanho, texto e ícone. Ao rolar, vira círculo com ícone.
@@ -2536,9 +2536,9 @@ header.is-compact a.hdr-cta {
   gap: 0;
   border-radius: 50%;
 }
- 
- 
- 
+
+
+
 /* =========================================================
    CELULAR E TABLET (abaixo de 900px)
    Cabeçalho: logo + tema + hambúrguer. Os links abrem no menu.
@@ -2555,21 +2555,21 @@ header.is-compact a.hdr-cta {
     transform: translateY(-50%);
   }
 }
- 
+
 @media (max-width: 899px) {
   header .wrap {
     position: relative;
     justify-content: space-between;
     gap: 10px;
   }
- 
+
   /* esconde o que não aparece no celular */
   header .sbtn,
   header a.hdr-cta,
   header .hdr-search:not(.hdr-search-m) {
     display: none;
   }
- 
+
   /* botões da direita: tema e menu */
   header .tg,
   header .hb {
@@ -2582,7 +2582,7 @@ header.is-compact a.hdr-cta {
   header .tg {
     font-size: 15px;
   }
- 
+
   /* menu hambúrguer: lista suspensa com os links */
   nav {
     position: absolute;
@@ -2640,7 +2640,7 @@ header.is-compact a.hdr-cta {
     max-width: none;
     opacity: 1;
   }
- 
+
   /* busca: sobe no lugar do logo ao rolar */
   .hdr-search-m {
     display: inline-flex;
@@ -2690,7 +2690,7 @@ header.is-compact a.hdr-cta {
     transition: opacity .3s ease;
   }
 }
- 
+
 /* Celular: tema e menu presos no canto direito; a busca fica à esquerda deles */
 @media (max-width: 899px) {
   header .tg {
@@ -2700,7 +2700,7 @@ header.is-compact a.hdr-cta {
     margin-left: 0;
   }
 }
- 
+
 /* Serviços no celular: mesma disposição do desktop (foto e texto lado a lado) */
 @media (max-width: 760px) {
   .sv,
@@ -2747,7 +2747,7 @@ header.is-compact a.hdr-cta {
     line-height: 1.45;
   }
 }
- 
+
 /* Celular: setas dos serviços menores e mais transparentes (não cobrem a foto) */
 @media (max-width: 760px) {
   .sv-ph .ar {
@@ -2764,7 +2764,7 @@ header.is-compact a.hdr-cta {
     right: 6px;
   }
 }
- 
+
 /* =========================================================
    LOGO (Studio DAY LIMA) com A em triângulo, sem traço
    ========================================================= */
@@ -2797,7 +2797,7 @@ header.is-compact a.hdr-cta {
 header.is-compact .logo .wm {
   font-size: 18px;
 }
- 
+
 /* Logo no topo da hero */
 .hero-logo {
   margin-bottom: 18px;
@@ -2807,12 +2807,12 @@ header.is-compact .logo .wm {
   color: #fff;
   text-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
 }
- 
+
 /* Chip de aberto/fechado: centralizado e sozinho */
 .hero-dock .chips {
   justify-content: center;
 }
- 
+
 /* Celular: logo do cabeçalho um pouco menor */
 @media (max-width: 899px) {
   .logo .wm {
@@ -2822,27 +2822,27 @@ header.is-compact .logo .wm {
     font-size: 15px;
   }
 }
- 
+
 /* Triângulo do A com a mesma espessura das letras (escala com o tamanho da fonte) */
 .wm-a path {
   stroke-width: 0.075em;
   vector-effect: non-scaling-stroke;
 }
- 
+
 /* A cópia da busca só existe no celular: some no computador */
 @media (min-width: 900px) {
   header .hdr-search-m {
     display: none;
   }
 }
- 
+
 /* =========================================================
    LOGO: traço do triângulo da mesma espessura das letras
    ========================================================= */
 .wm-a path {
   stroke-width: 4.4;
 }
- 
+
 /* =========================================================
    CABEÇALHO: a busca do celular não aparece no desktop
    ========================================================= */
@@ -2851,7 +2851,7 @@ header.is-compact .logo .wm {
     display: none;
   }
 }
- 
+
 /* =========================================================
    GALERIA: duas linhas em loop contínuo, em sentidos opostos
    ========================================================= */
@@ -2904,7 +2904,7 @@ header.is-compact .logo .wm {
   from { transform: translateX(-50%); }
   to { transform: translateX(0); }
 }
- 
+
 /* Visualização ampliada da foto */
 .lb {
   position: fixed;
@@ -2948,7 +2948,7 @@ header.is-compact .logo .wm {
   line-height: 1;
   cursor: pointer;
 }
- 
+
 /* Celular: fotos menores na galeria */
 @media (max-width: 640px) {
   .gal-set img {
@@ -2956,7 +2956,7 @@ header.is-compact .logo .wm {
     height: 230px;
   }
 }
- 
+
 @media (prefers-reduced-motion: reduce) {
   .gal-track {
     animation: none;
@@ -2965,7 +2965,7 @@ header.is-compact .logo .wm {
     overflow-x: auto;
   }
 }
- 
+
 /* =========================================================
    LOGO EM IMAGEM (Studio Day Lima)
    Cabeçalho: versão marrom no creme, branca no modo escuro.
@@ -3002,7 +3002,7 @@ header.is-compact .logo-img {
     height: 28px;
   }
 }
- 
+
 /* Topo da página */
 .hero-logo {
   margin-bottom: 18px;
@@ -3013,7 +3013,7 @@ header.is-compact .logo-img {
   width: auto;
   filter: drop-shadow(0 2px 16px rgba(0,0,0,.35));
 }
- 
+
 /* Rodapé */
 .foot-logo {
   margin-bottom: 10px;
@@ -3022,4 +3022,17 @@ header.is-compact .logo-img {
   height: 56px;
   width: auto;
   display: block;
+}
+
+/* Ícones da navegação compacta (desktop): brancos, com fundo escuro translúcido para contraste */
+@media (min-width: 900px) {
+  header.is-compact nav a {
+    color: #fff;
+    background: rgba(20, 14, 10, 0.5);
+    border-color: rgba(255, 255, 255, 0.35);
+  }
+  header.is-compact nav .nico {
+    color: #fff;
+    stroke: #fff;
+  }
 }
