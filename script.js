@@ -1031,3 +1031,25 @@ function makeInfinite(track, onChange) {
     if (e.key === 'Escape') close();
   });
 })();
+
+
+/* =========================================================
+   Trabalhe conosco: o link de WhatsApp já nasce pronto e é
+   atualizado sempre que a área escolhida muda. Não depende de
+   clique nem de onclick.
+   ========================================================= */
+(function () {
+  var select = document.getElementById('area');
+  var link = document.getElementById('enviarInteresse');
+  if (!select || !link) return;
+
+  var BASE = 'https://wa.me/5511976652392?text=';
+
+  function update() {
+    var area = select.value;
+    link.href = BASE + encodeURIComponent('Olá! Tenho interesse em trabalhar na área: ' + area);
+  }
+
+  select.addEventListener('change', update);
+  update();
+})();
